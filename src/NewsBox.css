@@ -22,5 +22,13 @@
   .rowC {
     flex-direction:column;
   }
+  .clicks{
+    display:flex;
+  }
 
+}
+.clicks{
+  align-items:center;
+  text-align: center;
+  justify-content:space-between;
 }

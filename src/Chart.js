@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {Line} from 'react-chartjs-2' ;
 
-const ForMedia= ({chartData}) => {
+const ForMedia= ({chartData,month,week}) => {
   const mql=window.matchMedia('(max-width:767px)')
   if(mql.matches){
     return (
@@ -20,7 +20,8 @@ const ForMedia= ({chartData}) => {
       </div>
     )
   }
-  else{return (
+  else{
+    return (
     <div className='chart' >
     <Line
     data={chartData}
@@ -41,21 +42,21 @@ export default class Chart extends Component{
   constructor(props){
     super(props);
     this.state={
-      chartData:props.chartData
+      chartData:this.props.chartData,
+      month:props.month,
+      week:props.week,
     }
   }
   static defaultProps = {
     displayTitle:true,
     displayLegend: true,
     legendPosition:'right',
-    location:'City'
   }
 
 
   render(){
     return (
       <ForMedia chartData={this.props.chartData}/>
-
     )
   }
 }
