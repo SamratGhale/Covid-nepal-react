@@ -1,0 +1,26 @@
+*{
+}
+.body{
+  margin-top:0;
+}
+.rowC {
+  background-color:rgb(255,238,171);
+  display:flex;
+  justify-content:space-between;
+}
+.row1,.row2{
+  margin-top:0;
+}
+.row1{
+  flex:2;
+}
+.row2{
+  flex:1.5;
+}
+
+@media screen and (max-width:767px){
+  .rowC {
+    flex-direction:column;
+  }
+
+}
